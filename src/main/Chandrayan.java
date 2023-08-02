@@ -30,6 +30,9 @@ public class Chandrayan{
                 case 'b':
                     goBackward();
                     break;
+                case 'l':
+                    goLeft();
+                    break;
             }
         }
         
@@ -103,6 +106,29 @@ public class Chandrayan{
                 break;
             case 'D':
                 z_coord++;
+                break;
+        }
+    }
+
+    private void goLeft() {
+        switch (direction) {
+            case 'N':
+                direction = 'W';
+                break;
+            case 'S':
+                direction = 'E';
+                break;
+            case 'E':
+                direction = 'N';
+                break;
+            case 'W':
+                direction = 'S';
+                break;
+            case 'U':
+                direction = 'W';
+                break;
+            case 'D':
+                direction = 'E';
                 break;
         }
     }
