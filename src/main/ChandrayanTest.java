@@ -47,4 +47,12 @@ public class ChandrayanTest {
         assertEquals(result, chandrayan.finalDirection(commands));
     }
 
+    @Test
+    public void testUpCommand(){
+        char[] commands = new char[] {'u'};
+        Chandrayan chandrayan = new Chandrayan(0, 0, 0, 'U');
+        String result = "(0,0,0,U)";
+        assertEquals(result, chandrayan.finalDirection(commands));
+    }
+
 }
