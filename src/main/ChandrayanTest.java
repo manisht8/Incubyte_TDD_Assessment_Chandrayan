@@ -31,4 +31,11 @@ public class ChandrayanTest {
         assertEquals(result, chandrayan.finalDirection(commands));
     }
 
+    @Test
+    public void testBackwardFromUpDecrementsZBy1(){
+        char[] commands = new char[] {'b'};
+        String result = "(0,0,-1,U)";
+        assertEquals(result, chandrayan.finalDirection(commands));
+    }
+
 }
