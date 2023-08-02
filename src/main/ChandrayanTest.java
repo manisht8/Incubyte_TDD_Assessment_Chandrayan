@@ -19,9 +19,15 @@ public class ChandrayanTest {
 
     @Test
     public void testForwardFromNorthIncrementsYBy1(){
-
         char[] commands = new char[] {'f'};
         String result = "(0,1,0,N)";
+        assertEquals(result, chandrayan.finalDirection(commands));
+    }
+
+    @Test
+    public void testRightFromNorthChangesDirectionToEast(){
+        char[] commands = new char[] {'r'};
+        String result = "(0,0,0,E)";
         assertEquals(result, chandrayan.finalDirection(commands));
     }
 
