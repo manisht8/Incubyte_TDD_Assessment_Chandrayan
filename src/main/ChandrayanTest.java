@@ -39,4 +39,12 @@ public class ChandrayanTest {
         assertEquals(result, chandrayan.finalDirection(commands));
     }
 
+    @Test
+    public void testLeftfromNorthChangesDirectionToWest(){
+        char[] commands = new char[] {'l'};
+        Chandrayan chandrayan = new Chandrayan(0, 0, 0, 'N');
+        String result = "(0,0,0,W)";
+        assertEquals(result, chandrayan.finalDirection(commands));
+    }
+
 }
