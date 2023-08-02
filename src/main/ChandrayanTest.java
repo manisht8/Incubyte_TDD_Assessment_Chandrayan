@@ -1,7 +1,6 @@
 package main;
 import org.junit.Test;
-import org.junit.BeforeClass;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ChandrayanTest {
 
@@ -17,4 +16,13 @@ public class ChandrayanTest {
         char[] commands = new char[] {'f', 'r', 'u', 'b', 'l'};
         chandrayan.finalDirection(commands);
     }
+
+    @Test
+    public void testForwardFromNorthIncrementsYBy1(){
+
+        char[] commands = new char[] {'f'};
+        String result = "(0,1,0,N)";
+        assertEquals(result, chandrayan.finalDirection(commands));
+    }
+
 }

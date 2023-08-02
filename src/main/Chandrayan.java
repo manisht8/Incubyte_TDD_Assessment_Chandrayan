@@ -16,7 +16,11 @@ public class Chandrayan{
         this.z_coord = z;
         this.direction = initialDirection;
     }
-    public void finalDirection(char[] commands){
-        
+    public String finalDirection(char[] commands){
+        String finalLocation = "(";
+
+        finalLocation += Integer.toString(x_coord) + "," + Integer.toString(y_coord) + "," + Integer.toString(z_coord) + "," + direction + ")";
+
+        return finalLocation;
     }
 }
