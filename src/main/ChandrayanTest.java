@@ -10,4 +10,8 @@ public class ChandrayanTest {
         chandrayan.finalDirection();
 
     }
+    @Test
+    public void testSetInitialPosition(){
+        Chandrayan chandrayan = new Chandrayan(0, 0, 0, 'N');
+    }
 }
