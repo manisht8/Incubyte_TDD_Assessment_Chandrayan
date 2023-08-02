@@ -50,7 +50,7 @@ public class ChandrayanTest {
     @Test
     public void testUpCommand(){
         char[] commands = new char[] {'u'};
-        Chandrayan chandrayan = new Chandrayan(0, 0, 0, 'U');
+        Chandrayan chandrayan = new Chandrayan(0, 0, 0, 'N');
         String result = "(0,0,0,U)";
         assertEquals(result, chandrayan.finalDirection(commands));
     }

@@ -33,6 +33,9 @@ public class Chandrayan{
                 case 'l':
                     goLeft();
                     break;
+                case 'u':
+                    goUp();
+                    break;
             }
         }
         
@@ -129,6 +132,27 @@ public class Chandrayan{
                 break;
             case 'D':
                 direction = 'E';
+                break;
+        }
+    }
+
+    private void goUp() {
+        switch (direction) {
+            case 'N':
+                direction = 'U';
+                break;
+            case 'S':
+                direction = 'D';
+                break;
+            case 'E':
+                direction = 'U';
+                break;
+            case 'W':
+                direction = 'U';
+                break;
+            case 'U':
+                break;
+            case 'D':
                 break;
         }
     }
