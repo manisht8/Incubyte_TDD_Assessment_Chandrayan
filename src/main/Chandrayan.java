@@ -1,22 +1,25 @@
 package main;
 
-public class Chandrayan{
+public class Chandrayan {
 
     private int xCoord, yCoord, zCoord;
     private char direction;
-    public Chandrayan(){
+
+    public Chandrayan() {
         this.xCoord = 0;
         this.yCoord = 0;
         this.zCoord = 0;
         this.direction = ' ';
     }
-    public Chandrayan(int x, int y, int z, char initialDirection){
+
+    public Chandrayan(int x, int y, int z, char initialDirection) {
         this.xCoord = x;
         this.yCoord = y;
         this.zCoord = z;
         this.direction = initialDirection;
     }
-    public String finalDirection(char[] commands){
+
+    public String finalDirection(char[] commands) {
         String finalLocation = "(";
 
         for (char command : commands) {
@@ -41,8 +44,9 @@ public class Chandrayan{
                     break;
             }
         }
-        
-        finalLocation += Integer.toString(xCoord) + "," + Integer.toString(yCoord) + "," + Integer.toString(zCoord) + "," + direction + ")";
+
+        finalLocation += Integer.toString(xCoord) + "," + Integer.toString(yCoord) + "," + Integer.toString(zCoord)
+                + "," + direction + ")";
 
         return finalLocation;
     }
