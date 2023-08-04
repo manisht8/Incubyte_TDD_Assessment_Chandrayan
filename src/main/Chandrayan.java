@@ -2,18 +2,18 @@ package main;
 
 public class Chandrayan{
 
-    private int x_coord, y_coord, z_coord;
+    private int xCoord, yCoord, zCoord;
     private char direction;
     public Chandrayan(){
-        this.x_coord = 0;
-        this.y_coord = 0;
-        this.z_coord = 0;
+        this.xCoord = 0;
+        this.yCoord = 0;
+        this.zCoord = 0;
         this.direction = ' ';
     }
     public Chandrayan(int x, int y, int z, char initialDirection){
-        this.x_coord = x;
-        this.y_coord = y;
-        this.z_coord = z;
+        this.xCoord = x;
+        this.yCoord = y;
+        this.zCoord = z;
         this.direction = initialDirection;
     }
     public String finalDirection(char[] commands){
@@ -42,7 +42,7 @@ public class Chandrayan{
             }
         }
         
-        finalLocation += Integer.toString(x_coord) + "," + Integer.toString(y_coord) + "," + Integer.toString(z_coord) + "," + direction + ")";
+        finalLocation += Integer.toString(xCoord) + "," + Integer.toString(yCoord) + "," + Integer.toString(zCoord) + "," + direction + ")";
 
         return finalLocation;
     }
@@ -50,22 +50,22 @@ public class Chandrayan{
     private void goForward() {
         switch (direction) {
             case 'N':
-                y_coord++;
+                yCoord++;
                 break;
             case 'S':
-                y_coord--;
+                yCoord--;
                 break;
             case 'E':
-                x_coord++;
+                xCoord++;
                 break;
             case 'W':
-                x_coord--;
+                xCoord--;
                 break;
             case 'U':
-                z_coord++;
+                zCoord++;
                 break;
             case 'D':
-                z_coord--;
+                zCoord--;
                 break;
         }
     }
@@ -96,22 +96,22 @@ public class Chandrayan{
     private void goBackward() {
         switch (direction) {
             case 'N':
-                y_coord--;
+                yCoord--;
                 break;
             case 'S':
-                y_coord++;
+                yCoord++;
                 break;
             case 'E':
-                x_coord--;
+                xCoord--;
                 break;
             case 'W':
-                x_coord++;
+                xCoord++;
                 break;
             case 'U':
-                z_coord--;
+                zCoord--;
                 break;
             case 'D':
-                z_coord++;
+                zCoord++;
                 break;
         }
     }
