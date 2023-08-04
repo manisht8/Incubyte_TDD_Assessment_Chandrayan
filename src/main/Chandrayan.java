@@ -20,8 +20,6 @@ public class Chandrayan {
     }
 
     public String finalDirection(char[] commands) {
-        String finalLocation = "(";
-
         for (char command : commands) {
             switch (command) {
                 case 'f':
@@ -45,9 +43,12 @@ public class Chandrayan {
             }
         }
 
-        finalLocation += Integer.toString(xCoord) + "," + Integer.toString(yCoord) + "," + Integer.toString(zCoord)
-                + "," + direction + ")";
+        return getFinalDirections();
+    }
 
+    public String getFinalDirections(){
+        String finalLocation = "(";
+        finalLocation += Integer.toString(xCoord) + "," + Integer.toString(yCoord) + "," + Integer.toString(zCoord) + "," + direction + ")";
         return finalLocation;
     }
 
