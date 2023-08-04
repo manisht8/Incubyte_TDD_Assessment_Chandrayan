@@ -47,9 +47,7 @@ public class Chandrayan {
     }
 
     public String getFinalDirections(){
-        String finalLocation = "(";
-        finalLocation += Integer.toString(xCoord) + "," + Integer.toString(yCoord) + "," + Integer.toString(zCoord) + "," + direction + ")";
-        return finalLocation;
+        return String.format("(%d,%d,%d,%c)", xCoord, yCoord, zCoord, direction);
     }
 
     private void goForward() {
